@@ -1,17 +1,20 @@
-// Armstrong number 
+let n = 36
+let sol = []
 
-let n = 7789 
-let arms = 0 
+for (let i = 1; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
 
-while (n > 0){
-
-    let last = n % 10
-    n = Math.floor(n/10)
-    arms += (last * last * last )
+        sol.push(i)
+        if (n / i !== i) {
+            sol.push(n / i)
+        }
+    }
 }
+// O(n logn): n is the number of factor.
+sol.sort((a,b)=> a-b)
 
-if(arms === n ){
-console.log(true)
-}else{
-    console.log(false)
-}
+
+// O(number of factor)
+sol.forEach(element => {
+    console.log(element)
+});
