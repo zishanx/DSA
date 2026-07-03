@@ -1,17 +1,17 @@
+// Armstrong number 
 
+let n = 7789 
+let arms = 0 
 
-let check = 1331
-let num = check
-let reverse = 0 
+while (n > 0){
 
-while (num > 0) {
-    let last = num % 10
-    reverse = reverse * 10 + last
-    num = Math.floor(num / 10)
+    let last = n % 10
+    n = Math.floor(n/10)
+    arms += (last * last * last )
 }
 
-if (reverse === check) {
-    console.log("it's a palindrome")
-} else {
-    console.log("it's not.")
+if(arms === n ){
+console.log(true)
+}else{
+    console.log(false)
 }
