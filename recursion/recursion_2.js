@@ -1,16 +1,48 @@
-// print name n times  using recursion.
 
 
-function print(i,n){
-    if(i > n){
-        return
+class Solution {
+    //print name N time ; 
+    printname(name, count, N) {
+
+        //Base Condition to stop the recursion
+        if (count === N) return
+
+        console.log(name)
+
+        this.printname(name, count + 1, N)
+
     }
-    console.log("Zishan")
-    print(i + 1 , n )
+
+    //print linear from 1 to n . 
+
+    printLinear(count, N) {
+        if (count > N) return
+
+        console.log(count)
+        this.printLinear(count + 1, N)
+    }
+
+    //print in terms of N to 1 
+
+    printBackwards(count, N) {
+
+        //Base condition
+        if (N < count) return
+
+        process.stdout.write(N + " ")
+
+        //recursion
+
+        this.printBackwards(count, N - 1)
+    }
 }
 
+const sol = new Solution()
 
-print(1,3);
+const N = 5
+const name = "Zishan"
 
-TL = O(n)
-SC = O(n)
+sol.printname(name, 0, N)
+sol.printLinear(1, N)
+sol.printBackwards(1,N)
+
