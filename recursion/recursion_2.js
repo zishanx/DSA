@@ -42,12 +42,23 @@ class Solution {
         //Base Condition 
 
         if (i > n) { return }
-        
         this.factorial(i + 1, n)
-        if( n % i === 0 ){
+
+        if (n % i === 0) {
             process.stdout.write(i + " ")
         }
 
+    }
+
+
+    // summation of first n numbers 
+
+    summation(sum, i, n) {
+        if (i > n) return
+        sum = sum + i
+        console.log(sum)
+
+        this.summation(sum, i + 1, n)
     }
 }
 
@@ -59,4 +70,7 @@ const name = "Zishan"
 // sol.printname(name, 0, N)
 // sol.printLinear(1, N)
 // sol.printBackwards(1, N)
-sol.factorial(1,100)
+// sol.factorial(1,100)
+sol.summation(0, 1, 5)
+
+
