@@ -51,14 +51,24 @@ class Solution {
     }
 
 
-    // summation of first n numbers 
+    // summation of first n numbers  parameter way 
 
     summation(sum, i, n) {
-        if (i > n) return
+        if (i > n) {
+            console.log(sum)
+            return
+        } 
         sum = sum + i
-        console.log(sum)
 
         this.summation(sum, i + 1, n)
+    }
+
+    //summation in returning function way
+
+    funcSum(n){
+        if(n === 0 ) return 0 
+
+        return n + this.funcSum(n - 1)
     }
 }
 
@@ -71,6 +81,7 @@ const name = "Zishan"
 // sol.printLinear(1, N)
 // sol.printBackwards(1, N)
 // sol.factorial(1,100)
-sol.summation(0, 1, 5)
+// sol.summation(0, 1, 5)
+console.log(sol.funcSum(3))
 
 
