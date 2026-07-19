@@ -35,6 +35,9 @@ class Solution {
 
         this.printBackwards(count, N - 1)
     }
+
+    //factorial in  rucrusion 
+    
 }
 
 const sol = new Solution()
