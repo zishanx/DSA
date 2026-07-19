@@ -37,7 +37,18 @@ class Solution {
     }
 
     //factorial in  rucrusion 
-    
+
+    factorial(i, n) {
+        //Base Condition 
+
+        if (i > n) { return }
+        
+        this.factorial(i + 1, n)
+        if( n % i === 0 ){
+            process.stdout.write(i + " ")
+        }
+
+    }
 }
 
 const sol = new Solution()
@@ -45,7 +56,7 @@ const sol = new Solution()
 const N = 5
 const name = "Zishan"
 
-sol.printname(name, 0, N)
-sol.printLinear(1, N)
-sol.printBackwards(1,N)
-
+// sol.printname(name, 0, N)
+// sol.printLinear(1, N)
+// sol.printBackwards(1, N)
+sol.factorial(1,100)
