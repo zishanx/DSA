@@ -36,9 +36,9 @@ class Solution {
         this.printBackwards(count, N - 1)
     }
 
-    //factorial in  rucrusion 
+    //factors in  rucrusion 
 
-    factorial(i, n) {
+    factors(i, n) {
         //Base Condition 
 
         if (i > n) { return }
@@ -70,6 +70,8 @@ class Solution {
 
         return n + this.funcSum(n - 1)
     }
+
+    
 }
 
 const sol = new Solution()
@@ -77,11 +79,11 @@ const sol = new Solution()
 const N = 5
 const name = "Zishan"
 
-// sol.printname(name, 0, N)
-// sol.printLinear(1, N)
-// sol.printBackwards(1, N)
-// sol.factorial(1,100)
-// sol.summation(0, 1, 5)
+sol.printname(name, 0, N)
+sol.printLinear(1, N)
+sol.printBackwards(1, N)
+sol.factorial(1,100)
+sol.summation(0, 1, 5)
 console.log(sol.funcSum(3))
 
 
