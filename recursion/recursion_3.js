@@ -2,8 +2,12 @@
 
 class solution {
 
-    reverseArray(arr,) {
+    reverseArray(arr,l,r) {
 
+        if(l >= r ) return
+
+        arr[0] = arr[]
+        
     }
 
 }
