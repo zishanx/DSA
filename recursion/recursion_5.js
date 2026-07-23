@@ -12,6 +12,7 @@ class Solution {
         }
         console.log(fib[n])
 
+
     }
 
     fib(n) {
