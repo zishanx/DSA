@@ -10,7 +10,7 @@ class Solution {
         for(let i = 2; i < n ; i++){
             fib.push(i-1 + i-2);
         }
-        console.log(fib[n])
+        console.log(fib[n-1])
 
 
     }
