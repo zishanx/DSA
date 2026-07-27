@@ -1,16 +1,10 @@
-let arr = [1, 2, 1, 3, 2]
 
+let arr = [2,1,2,4,4,2,5,8,7,2,9,3]
 
-function hash(number, array) {
+let hash = new Array(1000000).fill(0)
 
-    let count = 0
-
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] === number) { count++ }
-
-    }
-
-    return count
+for(let i = 0 ; i < 13 - 1;i ++){
+    hash[arr[i]] += 1
 }
 
-console.log(hash(19, arr))
+console.log(hash)
