@@ -38,5 +38,5 @@ class Solution {
 
 const sol = new Solution()
 
-// sol.brute(2)
+sol.brute(2)
 sol.opti(15)
