@@ -28,5 +28,20 @@ function backwards(i, n) {
     console.log(n)
     backwards(i, n - 1)
 }
+// Tc will be of big O of n 
+// Sc will be of big O of n 
 
-backwards(1, 5)
+
+// backwards(1, 5)
+
+
+// Now we are going to work with Backtracking. 
+
+
+function backtrack(i, n) {
+    if (i > n) return
+    backtrack(i + 1, n)
+    console.log(i)
+}
+
+backtrack(1, 3)
