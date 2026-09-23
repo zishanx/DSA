@@ -12,13 +12,29 @@ class Solution {
 
         return n + this.f(n - 1)
     }
+
+    factorial(n, fact) {
+        if (n === 0) { console.log(fact); return; }
+        fact = fact * n
+        this.factorial(n - 1, fact)
+    }
+
+
+    // trying to write the recursive code.
+
+    recrFact(n) {
+        if (n === 1) return 1
+        return n * this.recrFact(n - 1)
+    }
 }
 
 
 const sol = new Solution()
-const n = 3
+const n = 6
 
-sol.firstN(3, 0)
-console.log(sol.f(3))
+// sol.firstN(3, 0)
+// console.log(sol.f(3))
+// sol.factorial(n, 1)
+console.log(sol.recrFact(n))
 
 
