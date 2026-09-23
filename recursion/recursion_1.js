@@ -21,4 +21,12 @@ function linear(i, n) {
 //Tc will be big O of n.
 //Sc will be big O of n.
 
-linear(1, 5)
+// linear(1, 5)
+
+function backwards(i, n) {
+    if (i > n) return
+    console.log(n)
+    backwards(i, n - 1)
+}
+
+backwards(1, 5)
