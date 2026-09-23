@@ -19,21 +19,21 @@ class Solution {
 
 
         while (x > 0 & y > 0) {
-            if (x > y){
+            if (x > y) {
                 x = x % y
-            }else{
+            } else {
                 y = y % x
             }
         }
 
         console.log(Math.max(x, y))
 
-
+            // >> Big O(log fi(min(a, b)))
     }
 }
 
 const sol = new Solution()
 
-sol.brute(5, 53)  
+sol.brute(5, 53)
 
-sol.euclid(5,55)
+sol.euclid(5, 55)
