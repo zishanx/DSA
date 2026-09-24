@@ -22,6 +22,7 @@ class Solution {
 
     // trying to write the recursive code.
 
+    // tc will be Big O of n
     recrFact(n) {
         if (n === 1) return 1
         return n * this.recrFact(n - 1)
