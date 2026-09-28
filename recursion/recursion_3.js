@@ -9,6 +9,7 @@ class Solution {
     }
 
     // with a single para
+    // n-i-1
     revSing(arr, i) {
         let n = arr.length
         if (i >= n / 2) return arr;
