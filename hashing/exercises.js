@@ -11,6 +11,15 @@ for (const value of arr) {
 }
 
 console.log(map)
-function countFrequency(arr, n) {
 
+let minValue = Infinity
+let min = null
+
+for (const [key, value] of map) {
+    if (value < minValue) {
+        minValue = value
+        min = key
+    }
 }
+
+console.log(min)
