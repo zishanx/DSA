@@ -1,15 +1,23 @@
-const arr = [1, 2, 2, 3, 1, 4, 2]
+const arr = [1, 2, 2, 3, 1, 4, 2];
 
-const hash = new Array(5).fill(0)
+const max = Math.max(...arr)
+
+const hash = new Array(max + 1).fill(0)
 
 for (let i = 0; i < arr.length; i++) {
-    hash[arr[i]] += 1;
+    hash[arr[i]] += 1
 }
 
-console.log(hash)
+let maxOcc = 0
+let index = 0
 
-function find(num) {
-    console.log(hash[num])
+for (let i = 0; i < hash.length; i++) {
+    if (hash[i] > 0) {
+        if (maxOcc < hash[i]) {
+            maxOcc = hash[i]
+            index = i
+        }
+    }
 }
 
-find(2)
+console.log(index)
